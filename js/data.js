@@ -3,7 +3,7 @@
  */
 var data=[
     [
-        "images/ITEMimg/i1/ITEM.jpg",
+        "images/ITEMimg/i1/ITEM.png",
         "images/ITEMimg/i1/1.png",
         "images/ITEMimg/i1/2.png",
         "images/ITEMimg/i1/3.png",
@@ -13,14 +13,14 @@ var data=[
         "images/ITEMimg/i1/7.png"
     ],
     [
-        "images/ITEMimg/i2/ietm.jpg",
+        "images/ITEMimg/i2/ietm.png",
         "images/ITEMimg/i2/1.png",
         "images/ITEMimg/i2/2.png",
         "images/ITEMimg/i2/3.png",
         "images/ITEMimg/i2/4.png"
     ],
     [
-        "images/ITEMimg/i3/ITEM.jpg",
+        "images/ITEMimg/i3/ITEM.png",
         "images/ITEMimg/i3/1.png",
         "images/ITEMimg/i3/2.png",
         "images/ITEMimg/i3/3.png",
@@ -29,7 +29,7 @@ var data=[
         "images/ITEMimg/i3/6.png"
     ],
     [
-        "images/ITEMimg/i4/ITEM.jpg",
+        "images/ITEMimg/i4/ITEM.png",
         "images/ITEMimg/i4/1.png",
         "images/ITEMimg/i4/2.png",
         "images/ITEMimg/i4/3.png",
@@ -37,7 +37,7 @@ var data=[
         "images/ITEMimg/i4/5.png"
     ],
     [
-        "images/ITEMimg/i5/ITEM.jpg",
+        "images/ITEMimg/i5/ITEM.png",
         "images/ITEMimg/i5/1.png",
         "images/ITEMimg/i5/2.png",
         "images/ITEMimg/i5/3.png",
@@ -45,7 +45,7 @@ var data=[
         "images/ITEMimg/i5/5.png"
     ],
     [
-        "images/ITEMimg/i6/ITEM.jpg",
+        "images/ITEMimg/i6/ITEM.png",
         "images/ITEMimg/i6/1.png",
         "images/ITEMimg/i6/2.png",
         "images/ITEMimg/i6/3.png",

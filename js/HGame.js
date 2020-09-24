@@ -130,8 +130,10 @@ HGAME.Object2D=function(Obj){
  * CONST_BUF_Y 在画布上的y 不用修改 修改了也没用
  */
 HGAME.canvas=function(Obj){
+    let canvasDom = document.createElement("canvas");
+    canvasDom.setAttribute('id', 'myCanvas');
     var defaultObj={
-        dom:document.createElement("canvas"),
+        dom: canvasDom,
         w:500,
         h:500,
         W_INT:0,
@@ -188,7 +190,6 @@ HGAME.canvas=function(Obj){
     this.txt=this.dom.getContext("2d");
     this.txt.draw=function(O){
         if(O.img){
-            debugger;
             THIS.txt.drawImage( O.img, O.w* O.W_INT,  O.h* O.H_INT, O.w, O.h, O.CONST_BUF_X, O.CONST_BUF_Y, O.w, O.h);
         }else{
             THIS.txt.fillStyle= O.color;
