@@ -13,12 +13,21 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
+        }
+        .content{
+            width: 80%;
+            height: calc(100vh - 0.8rem);
+            overflow: hidden;
+            margin: 0 auto;
             background-image: url("./images/bg.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
         }
-
+        .top{
+            height: 0.8rem;
+            background-color: #002DFF;
+        }
         #gameBox {
             position: fixed;
             left: 0;
@@ -148,35 +157,39 @@
     </style>
 </head>
 <body>
-<div id="gameBox">
-    <div id="gameL">
-        <div id="nowSelectColor" style="display: none;"></div>
-        <div id="colorSelect"></div>
-    </div>
-    <div id="gameR">
-        <div id="canvasBox"></div>
-        <div id="imgBox">
-            <div onclick="changeDraw(0)" style="background-image: url('./images/exp/A.png');" class="item">
-                <div class="toolBox">汽车</div>
-            </div>
-            <div onclick="changeDraw(1)" style=" background-image: url('./images/exp/B.png');" class="item">
-                <div class="toolBox">蘑菇</div>
-            </div>
-            <div onclick="changeDraw(2)" style=" background-image: url('./images/exp/C.png');" class="item">
-                <div class="toolBox">飞机</div>
-            </div>
-            <div onclick="changeDraw(3)" style=" background-image: url('./images/exp/D.png');" class="item">
-                <div class="toolBox">气球</div>
-            </div>
-            <div onclick="changeDraw(4)" style=" background-image: url('./images/exp/E.png');" class="item">
-                <div class="toolBox">小鸭</div>
-            </div>
-            <div onclick="changeDraw(5)" style=" background-image: url('./images/exp/F.png');" class="item">
-                <div class="toolBox">皮球</div>
+<div class="top"></div>
+<div class="content">
+    <div id="gameBox">
+        <div id="gameL">
+            <div id="nowSelectColor" style="display: none;"></div>
+            <div id="colorSelect"></div>
+        </div>
+        <div id="gameR">
+            <div id="canvasBox"></div>
+            <div id="imgBox">
+                <div onclick="changeDraw(0)" style="background-image: url('./images/exp/A.png');" class="item">
+                    <div class="toolBox">汽车</div>
+                </div>
+                <div onclick="changeDraw(1)" style=" background-image: url('./images/exp/B.png');" class="item">
+                    <div class="toolBox">蘑菇</div>
+                </div>
+                <div onclick="changeDraw(2)" style=" background-image: url('./images/exp/C.png');" class="item">
+                    <div class="toolBox">飞机</div>
+                </div>
+                <div onclick="changeDraw(3)" style=" background-image: url('./images/exp/D.png');" class="item">
+                    <div class="toolBox">气球</div>
+                </div>
+                <div onclick="changeDraw(4)" style=" background-image: url('./images/exp/E.png');" class="item">
+                    <div class="toolBox">小鸭</div>
+                </div>
+                <div onclick="changeDraw(5)" style=" background-image: url('./images/exp/F.png');" class="item">
+                    <div class="toolBox">皮球</div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 </body>
 <script src="./js/HGame.js"></script>
 <script src="./js/data.js"></script>
