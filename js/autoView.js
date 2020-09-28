@@ -13,14 +13,19 @@
     docEl.firstElementChild.appendChild(metaEl);
     var recalc = function () {
         var width = docEl.clientWidth;
-        if (width / dpr > 2560) {
-            width = 2560 * dpr;
+        if (width / dpr > 4096) {
+            width = 4096 * dpr;
         }
         // 乘以100，px : rem = 100 : 1
-        docEl.style.fontSize = 100 * (width / 2560) + 'px';
+        docEl.style.fontSize = 100 * (width / 4096) + 'px';
         let myCanvas = document.getElementById('myCanvas');
-        myCanvas.style.transform = 'scale('+ 1.1 * (width / 2560) +')';
-        docEl.style.fontSize = 100 * (width / 2560) + 'px';
+        myCanvas.style.transform = 'scale('+ 1.5 * (width / 4096) +')';
+        docEl.style.fontSize = 100 * (width / 4096) + 'px';
+        // if(width < 1300){
+        //     myCanvas.style.left = '-' + 0.3 * (4096 / width) + 'rem';
+        // }else if(width < 1200){
+        //     myCanvas.style.left = 0;
+        // }
     };
     recalc();
     if (!doc.addEventListener) return;

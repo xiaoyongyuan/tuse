@@ -12,38 +12,39 @@
         html, body {
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
         }
-        .content{
-            width: 80%;
-            height: calc(100vh - 0.8rem);
-            overflow: hidden;
+
+        #head {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 999;
+            height: 1.2798rem;
+            background-color: #002DFF;
+        }
+
+        #gameBox {
             margin: 0 auto;
+            padding-top: 3rem;
+            padding-bottom: 1rem;
+            width: 25.6rem;
+            display: flex;
+            overflow: hidden;
+            zoom: 1;
             background-image: url("./images/bg.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
             background-position: center;
-        }
-        .top{
-            height: 0.8rem;
-            background-color: #002DFF;
-        }
-        #gameBox {
-            position: fixed;
-            left: 0;
-            right: 0;
-            margin: auto;
-            width: 18rem;
-            display: flex;
-            overflow: hidden;
-            zoom: 1;
             justify-content: space-between;
         }
 
         #gameL {
             position: relative;
-            width: 6.6rem;
-            height: 12.195rem;
+            width: 9.3852rem;
+            height: 17.34129rem;
             background-image: url("./images/gameL-bg.png");
             background-repeat: no-repeat;
             background-size: cover;
@@ -52,22 +53,21 @@
 
         #colorSelect {
             position: absolute;
-            left: 0.95rem;
-            top: 2.35rem;
-            width: 4.7rem;
-            height: 4.1rem;
+            left: 1.38rem;
+            top: 3.35rem;
+            width: 6.68rem;
+            height: 5.8rem;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
 
         #colorSelect .item{
-            width: 0.4rem;
-            height: 0.4rem;
+            width: 0.7rem;
+            height: 0.7rem;
             cursor: pointer;
             position: relative;
             margin-right: 0.15rem;
-            margin-bottom: 0.12rem;
         }
 
         #colorSelect .item:after {
@@ -87,15 +87,15 @@
 
         #gameR {
             position: relative;
-            width: 11.445rem;
-            padding-top: 0.6rem;
-            height: 11.595rem;
+            width: 16.27479rem;
+            padding-top: 1rem;
+            height: 16.34192rem;
         }
 
         #canvasBox {
             width: 100%;
             padding-top: 1rem;
-            height: 5.345rem;
+            height: 8.19323rem;
             text-align: center;
             position: relative;
             background-position: center;
@@ -114,19 +114,39 @@
         }
 
         #imgBox {
-            height: 1.7rem;
+            height: 3.3rem;
             position: absolute;
-            width: 100%;
+            width: 98%;
             left: 0;
             display: flex;
-            bottom: 0.4rem;
-            overflow: hidden;
-            justify-content: space-between;
+            flex-wrap: nowrap;
+            overflow-x: scroll;
+            bottom: 1.4rem;
+            overflow-y: hidden;
+        }
+
+        #imgBox::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        #imgBox::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        #imgBox::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            background: rgba(0, 0, 0, 0.1);
         }
 
         #imgBox .item{
-            width: 1.6rem;
-            height: 1.6rem;
+            width: 3.2rem;
+            height: 3.2rem;
+            flex: 0 0 3.2rem;
+            margin-right: 0.7rem;
             border-radius: 0.3rem;
             background-size: cover;
             background-position: center;
@@ -154,42 +174,93 @@
             transition: all 0.25s linear;
             cursor: pointer;
         }
+
+        @media (max-width: 1300px) and (min-width: 1100px) {
+            #canvasBox canvas {
+                left: -0.5rem;
+            }
+        }
+
+        @media (max-width: 1100px) and (min-width: 1000px) {
+            #canvasBox canvas {
+                left: -1rem;
+            }
+        }
+
+        @media (max-width: 1000px) and (min-width: 900px) {
+            #canvasBox canvas {
+                left: -2.5rem;
+            }
+        }
+
+        @media (max-width: 900px) and (min-width: 800px) {
+            #canvasBox canvas {
+                left: -3.5rem;
+            }
+        }
+
+        @media (max-width: 800px) and (min-width: 700px) {
+            #canvasBox canvas {
+                left: -5rem;
+            }
+        }
+
+        @media (max-width: 700px) and (min-width: 650px) {
+            #canvasBox canvas {
+                left: -6.5rem;
+            }
+        }
+
+        @media (max-width: 650px) and (min-width: 600px) {
+            #canvasBox canvas {
+                left: -8rem;
+            }
+        }
+
+        @media (max-width: 600px) and (min-width: 550px) {
+            #canvasBox canvas {
+                left: -9.5rem;
+            }
+        }
+
+        @media (max-width: 550px) and (min-width: 500px) {
+            #canvasBox canvas {
+                left: -11rem;
+            }
+        }
     </style>
 </head>
 <body>
-<div class="top"></div>
-<div class="content">
-    <div id="gameBox">
-        <div id="gameL">
-            <div id="nowSelectColor" style="display: none;"></div>
-            <div id="colorSelect"></div>
-        </div>
-        <div id="gameR">
-            <div id="canvasBox"></div>
-            <div id="imgBox">
-                <div onclick="changeDraw(0)" style="background-image: url('./images/exp/A.png');" class="item">
-                    <div class="toolBox">汽车</div>
-                </div>
-                <div onclick="changeDraw(1)" style=" background-image: url('./images/exp/B.png');" class="item">
-                    <div class="toolBox">蘑菇</div>
-                </div>
-                <div onclick="changeDraw(2)" style=" background-image: url('./images/exp/C.png');" class="item">
-                    <div class="toolBox">飞机</div>
-                </div>
-                <div onclick="changeDraw(3)" style=" background-image: url('./images/exp/D.png');" class="item">
-                    <div class="toolBox">气球</div>
-                </div>
-                <div onclick="changeDraw(4)" style=" background-image: url('./images/exp/E.png');" class="item">
-                    <div class="toolBox">小鸭</div>
-                </div>
-                <div onclick="changeDraw(5)" style=" background-image: url('./images/exp/F.png');" class="item">
-                    <div class="toolBox">皮球</div>
-                </div>
+<div id="head"></div>
+<div id="gameBox">
+    <div id="gameL">
+        <div id="nowSelectColor" style="display: none;"></div>
+        <div id="colorSelect"></div>
+    </div>
+    <div id="gameR">
+        <div id="canvasBox"></div>
+        <div id="imgBox">
+            <div onclick="changeDraw(0)" style="background-image: url('images/exp/exp/A.png');" class="item">
+                <div class="toolBox">汽车</div>
+            </div>
+            <div onclick="changeDraw(1)" style=" background-image: url('images/exp/exp/B.png');" class="item">
+                <div class="toolBox">蘑菇</div>
+            </div>
+            <div onclick="changeDraw(2)" style=" background-image: url('images/exp/exp/C.png');" class="item">
+                <div class="toolBox">飞机</div>
+            </div>
+            <div onclick="changeDraw(3)" style=" background-image: url('images/exp/exp/D.png');" class="item">
+                <div class="toolBox">气球</div>
+            </div>
+            <div onclick="changeDraw(4)" style=" background-image: url('images/exp/exp/E.png');" class="item">
+                <div class="toolBox">小鸭</div>
+            </div>
+            <div onclick="changeDraw(5)" style=" background-image: url('images/exp/exp/F.png');" class="item">
+                <div class="toolBox">皮球</div>
             </div>
         </div>
     </div>
 </div>
-
 </body>
 <script src="./js/HGame.js"></script>
 <script src="./js/data.js"></script>
